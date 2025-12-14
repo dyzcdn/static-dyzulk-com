@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="id" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dyzulk Scripts</title>
+
+    <link rel="icon" href="https://cdn.dyzulk.com/favicon.ico" />
+    <link rel="stylesheet" href="/style.css" />
+
+    <style>
+      .cmd-box {
+        background: #0f172a;
+        color: #e5e7eb;
+        padding: 1rem;
+        border-radius: 0.75rem;
+        font-family: monospace;
+        font-size: 0.9rem;
+        word-break: break-all;
+      }
+      .copy-btn {
+        background: linear-gradient(to bottom right, #364a94, #7d7ab8);
+        color: #fff;
+        padding: 0.4rem 0.75rem;
+        border-radius: 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .copy-btn:hover {
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+
+  <body class="h-full flex items-center justify-center bg-white">
+    <main class="max-w-3xl w-full px-6 text-center">
+
+      <div class="flex flex-col items-center mb-6">
+        <img
+          src="https://cdn.dyzulk.com/logo/favicon.png"
+          alt="Dyzulk"
+          class="w-20"
+        />
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl font-semibold text-gray-900">
+        Dyzulk Scripts
+      </h1>
+
+      <p class="mt-4 text-gray-500 text-lg">
+        Ready-to-use installation scripts hosted securely on Dyzulk CDN.
+      </p>
+
+      <!-- COMMAND LIST -->
+      <div class="mt-10 space-y-6 text-left">
+
+        <!-- CURL -->
+        <div>
+          <p class="mb-2 font-semibold text-gray-700">Install Dyzulk CA (curl)</p>
+          <div class="flex items-center gap-3">
+            <div id="cmd-curl" class="cmd-box flex-1">
+              curl -fsSL https://cache-cdn.dyzulk.com/scripts/install-dy-ca.sh | sudo bash
+            </div>
+            <button class="copy-btn" onclick="copyCmd('cmd-curl')">
+              Copy
+            </button>
+          </div>
+        </div>
+
+        <!-- WGET -->
+        <div>
+          <p class="mb-2 font-semibold text-gray-700">Install Dyzulk CA (wget)</p>
+          <div class="flex items-center gap-3">
+            <div id="cmd-wget" class="cmd-box flex-1">
+              wget -qO- https://cache-cdn.dyzulk.com/scripts/install-dy-ca.sh | sudo bash
+            </div>
+            <button class="copy-btn" onclick="copyCmd('cmd-wget')">
+              Copy
+            </button>
+          </div>
+        </div>
+
+        <!-- DIRECT DOWNLOAD -->
+        <div>
+          <p class="mb-2 font-semibold text-gray-700">Manual Download</p>
+          <div class="flex items-center gap-3">
+            <div id="cmd-direct" class="cmd-box flex-1">
+              wget https://cache-cdn.dyzulk.com/scripts/install-dy-ca.sh
+            </div>
+            <button class="copy-btn" onclick="copyCmd('cmd-direct')">
+              Copy
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-12">
+        <a
+          href="https://www.dyzulk.com"
+          class="rounded-md bg-gradient-to-br from-[#364A94] to-[#7D7AB8] px-4 py-2.5 text-sm font-semibold text-white shadow hover:opacity-90"
+        >
+          Go to Dyzulk Dev
+        </a>
+      </div>
+
+    </main>
+
+    <script>
+      function copyCmd(id) {
+        const text = document.getElementById(id).innerText;
+        navigator.clipboard.writeText(text).then(() => {
+          alert("Command copied to clipboard");
+        });
+      }
+    </script>
+  </body>
+</html>
