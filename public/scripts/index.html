@@ -81,19 +81,6 @@
           </div>
         </div>
 
-        <!-- DIRECT DOWNLOAD -->
-        <div>
-          <p class="mb-2 font-semibold text-gray-700">Manual Download</p>
-          <div class="flex items-center gap-3">
-            <div id="cmd-direct" class="cmd-box flex-1">
-              wget https://cache-cdn.dyzulk.com/scripts/install-dy-ca.sh
-            </div>
-            <button class="copy-btn" onclick="copyCmd('cmd-direct')">
-              Copy
-            </button>
-          </div>
-        </div>
-
         <!-- GOTO SERVER -->
         <div>
           <p class="mb-2 font-semibold text-gray-700">Connect Go To Server</p>
@@ -102,6 +89,19 @@
               curl -fsSL https://cache-cdn.dyzulk.com/scripts/goto-server.sh | sudo bash
             </div>
             <button class="copy-btn" onclick="copyCmd('cmd-curl-go-to')">
+              Copy
+            </button>
+          </div>
+        </div>
+
+        <!-- PORT ENABLER -->
+        <div>
+          <p class="mb-2 font-semibold text-gray-700">Port Enabler</p>
+          <div class="flex items-center gap-3">
+            <div id="port-enabler" class="cmd-box flex-1">
+              curl -fsSL https://cache-cdn.dyzulk.com/scripts/aapanel-multiwebserver-enable-port.sh | sudo bash
+            </div>
+            <button class="copy-btn" onclick="copyCmd('port-enabler')">
               Copy
             </button>
           </div>
