@@ -55,7 +55,7 @@
       <!-- COMMAND LIST -->
       <div class="mt-10 space-y-6 text-left">
 
-        <!-- CURL -->
+        <!-- CURL CA -->
         <div>
           <p class="mb-2 font-semibold text-gray-700">Install Dyzulk CA (curl)</p>
           <div class="flex items-center gap-3">
@@ -68,7 +68,7 @@
           </div>
         </div>
 
-        <!-- WGET -->
+        <!-- WGET CA -->
         <div>
           <p class="mb-2 font-semibold text-gray-700">Install Dyzulk CA (wget)</p>
           <div class="flex items-center gap-3">
@@ -76,6 +76,19 @@
               wget -qO- https://cache-cdn.dyzulk.com/scripts/install-dy-ca.sh | sudo bash
             </div>
             <button class="copy-btn" onclick="copyCmd('cmd-wget')">
+              Copy
+            </button>
+          </div>
+        </div>
+
+        <!-- UNINSTALL CA -->
+        <div>
+          <p class="mb-2 font-semibold text-gray-700">Install Dyzulk CA (curl)</p>
+          <div class="flex items-center gap-3">
+            <div id="uninstall-ca" class="cmd-box flex-1">
+              curl -fsSL https://cache-cdn.dyzulk.com/scripts/uninstall-ca.sh | sudo bash
+            </div>
+            <button class="copy-btn" onclick="copyCmd('uninstall-ca')">
               Copy
             </button>
           </div>
